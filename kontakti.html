@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakti</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: white;
+}
+/* linkovi */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+.main-nav img {
+    width: 225px;
+    height: 95px;
+    margin-left: 60px;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+.nav-links a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+.index{color: black;}
+.onama{color: black;}
+.uprava{color: black;}
+.projekti{color: black;}
+.natjecaji{color: black;}
+.maps{color: black;}
+.kontakti{
+    background-color: #b22222;
+    color: white;
+    padding: 4px 14px;
+    border-radius: 5px;
+}
+/* naslov1 */
+.naslov-prvi{
+    text-align: center;
+    font-size: 35px;
+    color: #888;
+}
+/* tekst */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1150px;
+    margin: auto;
+    text-align: center;
+    background-color: #eeeeee;
+    padding-top: 150px;
+    padding-bottom: 150px; 
+    padding-left: 400px;
+    padding-right: 400px;
+}
+.section h2 {
+    color: darkred;
+    font-size: 25px;
+    margin-top: 0px;
+}
+.section img {
+    width: 45px;
+    height: 49px;
+}
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+.section ul li {
+    margin: 40px ;
+}
+/* adresa */
+.adresa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    background-color: #14171c;
+    padding-top: 100px;
+    padding-bottom: 100px; 
+    margin-bottom: 20px;
+}
+.adresa-tekst {
+    color: white;
+}
+.adresa-tekst h1 {
+    font-size: 50px;
+    text-align: left;
+    margin-left: 400px;
+    margin-bottom: 30px;
+}
+.adresa-tekst h4{
+    margin: 10px 0;
+    text-align: left;
+    margin-left: 400px;
+}
+/* Footer */
+footer{
+    text-align: center;
+}
+footer a{
+    color: #888;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+}
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+    .main-nav img {
+        margin-left: 0;
+        width: 150px;
+        height: auto;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+    .adresa-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .adresa-tekst h1,
+    .adresa-tekst h4 {
+        margin-left: 0;
+        text-align: center;
+    }
+    .section img {
+        width: 40px;
+        height: auto;
+    }
+    .section ul li {margin: 15px 0;}
+}
+</style> 
+</head>
+<body>
+    <nav class="main-nav">
+        <img src="ssklivno_logo_2022.png" alt="Logo škole">
+        <div class="nav-links">
+            <a href="index.html" class="index">Početna</a>
+            <a href="onama.html" class="onama">O nama</a>
+            <a href="uprava.html" class="uprava">Uprava</a>
+            <a href="projekti.html" class="projekti">Projekti</a>
+            <a href="natjecaji.html" class="natjecaji">Natječaji i objave</a>
+            <a href="https://maps.app.goo.gl/sshsnftJou4t5jF17" class="maps">SSK 360</a>
+            <a href="kontakti.html" class="kontakti">KONTAKTI</a>
+        </div>
+    </nav>
+    <header>
+        <div class="naslov-prvi">
+            <h1>Kontakti</h1>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Brojevi telefona -->
+        <div class="section">
+            <img src="fontele.png" alt="Telefon">
+            <h2>Brojevi telefona:</h2>
+            <ul>
+                <li>ravnatelj: +387 34 201 580</li>
+                <li>pedagog: +387 34 201 943</li>
+                <li>tajništvo: +387 34 202 148</li>
+                <li>računovodstvo: +387 34 208 175</li>
+            </ul>
+        </div>
+        <!-- E-mail -->
+        <div class="section">
+            <img src="postili.png" alt="E-mail">
+            <h2>E-mail:</h2>
+            <ul>
+                <li>ravnatelj@ssklivno.net</li>
+                <li>pedagog@ssklivno.net</li>
+                <li>tajnistvo@ssklivno.net</li>
+                <li>racunovodstvo@ssklivno.net</li>
+            </ul>
+        </div>
+        <!-- Uredi -->
+        <div class="section">
+            <img src="pinili.png" alt="Lokacija">
+            <h2>Uredi:</h2>
+            <ul>
+                <li>ravnatelj – treći kat</li>
+                <li>pedagog – drugi kat</li>
+                <li>tajništvo – prizemlje (desno)</li>
+                <li>računovodstvo – prizemlje (lijevo)</li>
+            </ul>
+        </div>
+    </div>
+    <section id="adresa"> 
+        <div class="adresa-grid">
+            <div class="adresa-tekst">
+                <h1>Javite nam se ili nas <br> posjetite na adresi</h1>
+                <h4>Dinarina 2</h4> <br>
+                <h4>80101 Livno</h4> <br>
+                <h4>Bosna i Hercegovina</h4> <br>
+            </div>
+            <div><a href="https://maps.app.goo.gl/JGYH4Hti6H6zzezn7"><img src="karta.png" alt=""></a></div>
+        </div>
+    </section> 
+
+    <footer>
+        <div class="link">
+            <a href="kontakti.html">Kontakti</a>
+            <a href="natjecaji.html">Natječaji i objave</a>
+            <a href="onama.html">O nama</a>
+            <a href="index.html">Početna</a>
+            <a href="onama.html">Pravila pisanja završnog rada</a>
+            <a href="projekti.html">Projekti</a>
+            <a href="onama.html">Struke i zanimanja</a>
+            <a href="uprava.html">Uprava</a>
+        </div>
+    </footer>
+</body>
+</html>

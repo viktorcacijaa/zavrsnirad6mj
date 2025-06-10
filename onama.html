@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nama</title>
+    <style>
+        body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+    height: 13vh;
+    padding-left: 25vh;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: darkred;
+    }
+
+    .btn-kontakt {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-kontakt:hover {
+      background-color: darkred;
+    }
+
+    .pocetak-str {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .naslov {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vh;
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      color: gray;
+      font-size: 3.5vh;
+    }
+
+    .ostatak {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      color: rgb(65, 65, 65);
+      margin-right: 6vh;
+      font-size: 2.1vh;
+    }
+
+    .ostatak-slika {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 30vh;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    .pocetak-drugi {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background-color: rgb(49, 49, 49);
+      margin-top: 30vh;
+      height: 90vh;
+    }
+
+    .pocetak-drugi-tekst {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      font-size: 3vh;
+      color: white;
+    }
+
+    .pocetak-drugi-slika {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      border: none;
+      height: 100vh;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    .treci-dio {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      background-color: rgb(177, 177, 177);
+    }
+
+    .treci-dio-tekst {
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      align-items: center;
+      height: 30vh;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      padding: 10vh;
+      font-size: 3vh;
+    }
+
+    .treci-dio-slika {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      height: 40vh;
+      padding: 10vh;
+    }
+
+    .cetvrti-dio-slika {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      margin-top: 4vh;
+    }
+
+    .cetvrti-dio-tekst {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      font-size: 2vh;
+      margin-top: 10vh;
+    }
+
+    .peti-sesti {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .peti-tekst {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      font-size: 2.2vh;
+      padding-top: 20vh;
+      padding-right: 2vh;
+      padding-left: 2vh;
+      color: gray;
+    }
+
+    .peti-slika {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding-top: 20vh;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+     
+    }
+
+    .sesti-tekst {
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      align-items: center;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      padding-top: 20vh;
+      padding-left: 4vh;
+      padding-right: 4vh;
+      font-size: 2.2vh;
+      color: gray;
+    }
+
+    .sesti-slika {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      height: 70vh;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      padding-top: 20vh;
+      padding-left: 2vh;
+    }
+
+    .dugmili {
+  position: relative;
+  left: 84vh;
+  font-size: 2.2vh;
+  margin-top: 20px;
+  color: white;
+  background-color: red;
+  height: 5vh;
+  width: 30vh;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  align-self: center;
+}
+
+.pocetna-predzdanji-dio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.predzdanji-dio {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgb(68, 68, 68);
+  color: white;
+}
+
+.dugme-kontaktirajte {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  height: 5vh;
+  width: 23vh;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 4vw;
+}
+
+.zadnji-dio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.zadnji-dio-sadrzaj {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.zadnji-dio-sadrzaj a {
+  text-decoration: none;
+  color: black;
+}
+
+.kraj {
+  color: red;
+  padding-left: 19vw;
+}
+    
+    
+    </style>
+</head>
+<body>
+    <header>
+  <img class="logo" src="ssklivno_logo_2022.png" alt="">
+  <nav>
+    <a href="index.html">POČETNA</a>
+    <a href="o nama.html">O NAMA</a>
+    <a href="uprava.html">UPRAVA</a>
+    <a href="projekti.html">PROJEKTI</a>
+    <a href="natjecaji i objave.html">NATJEČAJI I OBJAVE</a>
+    <a href="https://gothru.co/PmiL0KxRr?index=scene_0&hlookat=0&vlookat=0&fov=120">SSK 360</a>
+    <a href="kontakti.html" class="btn-kontakt">KONTAKTI</a>
+  </nav>
+</header>
+
+<div class="pocetak-str">
+  <div class="naslov">
+    <h1>O nama</h1>
+  </div>
+  <div class="ostatak">
+    <p>Srednja strukovna škola Silvija Strahimira Kranjčevića je odgojno-obrazovna ustanova koja omogućuje stjecanje znanja i sposobnosti srednje stručne spreme u trajanju od tri ili četiri godine te dokvalifikaciju i prekvalifikaciju zanimanja. Škola se nalazi u jednoj od najstarijih zgrada u gradu Livnu. Glavna zgrada je sagrađena davne 1886. i od svoje izgradnje služila je kao odgojno-obrazovna ustanova. Godine 1974. dograđeno je zapadno krilo uz staru zgradu. Sjeverna zgrada sagrađena je 1965. i dugo je služila učenicima đačkog doma kao spavaonica. Ostale pomoćne zgrade podignute su u razdoblju od 1971. do 1973., a športska dvorana 1976. godine.</p>
+  </div>
+
+  <div class="ostatak-slika">
+    <img style="width: 60vh;" src="SSKLivno_old_image.jpg" alt="">
+  </div>
+</div>
+
+<div class="pocetak-drugi">
+  <div class="pocetak-drugi-tekst">
+    <p>Škola je status srednje škole stekla 1959. i od tada nosi ime poznatog hrvatskog pjesnika Silvija Strahimira Kranjčevića, svog najpoznatijeg djelatnika koji je, kao učitelj, u ovoj školi radio u dva navrata: od 1886. do 1888. i od 1892. do 1893. godine.</p>
+  </div>
+
+  <div class="pocetak-drugi-slika">
+    <img src="brkati manijak.png" alt="">
+  </div>
+</div>
+
+<div class="treci-dio">
+  <div class="treci-dio-tekst">
+    <p>Školska zgrada je godinama vapila za preuređenjem s kojim se sustavno započelo 2014. i traje i danas.</p>
+  </div>
+  <div class="treci-dio-slika">
+    <img src="nekad-i-sad_ssklivno.jpg" alt="">
+  </div>
+</div>
+
+
+  <div class="cetvrti-dio-tekst">
+    <p>S ponosom možemo reći da se naša škola zadnjih godina pretvorila u najljepšu zgradu u gradu Livnu, a zaslugom uprave i svih djelatnika škole, pretvorila se i u jedan od najmodernije opremljenih obrazovnih centara u Bosni i Hercegovini.</p>
+  </div>
+  <div class="cetvrti-dio-slika">
+    <img src="SSK 4 slika.jpg" alt="">
+  </div>
+
+  <div class="peti-sesti">
+    <div class="peti-tekst">
+      <p>Danas školu pohađa oko 560 učenika. U školi radi 75 djelatnika, zajedno s vanjskim suradnicima čiji se broj mijenja ovisno o zanimanjima koja škola uvodi sukladno potrebama tržišta rada. Učenici su raspoređeni u 27 odjela i obrazuju se za atraktivna strukovna zanimanja na području elektrotehnike, strojarstva, zdravstva, poljoprivrede, prehrane te ugostiteljstva i turizma. Jedna smo od rijetkih srednjih škola koja je svoja vrata otvorila djeci s poteškoćama u razvoju i omogućila im srednjoškolsku izobrazbu za zanimanje pomoćni kuhar. Već godinama škola nosi titulu „Škola sa srcem“ jer pomaže svojoj zajednici kroz različite humanitarne akcije i kroz svoju pučku kuhinju kojom svakodnevno olakšava život ljudima u potrebi te stvara socijalno osjetljive mlade ljude.</p>
+    </div>
+    <div class="peti-slika">
+      <img src="neki cepovi.jpg" alt="">
+    </div>
+
+    <div class="sesti-tekst">
+      <p>Dio redovitog obrazovanja učenika postali su i projekti koji omogućuju nabavku moderne opreme koja je nužna za spajanje teorije i prakse i stvaranje kadra konkurentnog na tržištu rada.</p>
+    </div>
+    <div class="sesti-slika">
+      <img src="printili.jpg" alt="">
+    </div>
+   <button class="dugmili">Struke i zanimanja</button>
+  </div>
+
+  <div class="pocetna-predzdanji-dio">
+  <div class="predzdanji-dio">
+    <h1 style="font-size: 3vh;">"Zahvaljujući vrijednom radu uprave i djelatnika, Srednja strukovna škola Silvija Strahimira
+Kranjčevića postala je vodeći regionalni centar za strukovno obrazovanje i već je opravdala, nekad
+željeni status, škole budućnosti."</h1>
+    <a href="uprava.html">
+    <button class="dugme-kontaktirajte">Uprava</button>
+    </a>
+  </div>
+</div>
+
+<div class="zadnji-dio">
+  <div class="zadnji-dio-sadrzaj">
+    <a href="kontakti.html"><li>Kontakti</li></a>
+    <a href="natjecaji i objave.html"><li>Natječaji i objave</li></a>
+    <a href="o nama.html"><li>O nama</li></a>
+    <a href="index.html"><li>Početna</li></a>
+    <li>Pravila pisanja završnog rada</li>
+    <a href="projekti.html"><li>Projekti</li></a>
+    <li>Struke i zanimanja</li>
+    <a href="uprava.html"><li>Uprava</li></a>
+  </div>
+</div>
+
+<div class="kraj">
+  <p>Powered by SSK | 2025.</p>
+</div>
+
+
+</body>
+</html>

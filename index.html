@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSK Livno</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 2rem;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-left: auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s;
+      padding: 0.4rem 0;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    .contact-button {
+      background-color: red;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .hero {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: white;
+      height: 90vh;
+      background-image: url('SSK3.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0.5rem 0;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin: 0.2rem 0;
+    }
+
+    .hero h3 {
+      font-size: 1.5rem;
+      margin: 0.2rem 0;
+      color: #ddd;
+    }
+
+    .hero .button {
+      margin-top: 2rem;
+      background-color: red;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .stats-projects {
+      padding: 3rem 2rem;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 7rem; 
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: red;
+    }
+
+    .stat-label {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    .project {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-left: 0;
+    }
+
+    .project-image {
+      width: 50%;
+      display: block;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .project-content {
+      width: 50%;
+      text-align: left;
+    }
+
+    .project-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-content p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .project-content .button {
+      background-color: #b22222;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.1rem;
+    }
+
+    .natjecaji {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .natjecaji h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin: 0;
+    }
+
+    .natjecaji .button {
+      background-color: #b22222;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .natjecaji img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .uprava {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      background-color: #1a2526;
+      text-align: center;
+      color: white;
+    }
+
+    .uprava h2 {
+      font-size: 2.5rem;
+      color: white;
+      margin: 0;
+    }
+
+    .uprava .button {
+      background-color: #b22222;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .uprava img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .dnevne-aktivnosti {
+      padding: 3rem 2rem;
+      background-color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    .dnevne-aktivnosti h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .dnevne-aktivnosti p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+   
+    .footer-innovation {
+      background-color: #2d3748;
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+      position: relative;
+    }
+
+    .footer-innovation h1 {
+      font-size: 2.5rem;
+      margin: 0 0 1rem 0;
+      font-weight: bold;
+    }
+
+    .footer-innovation .button {
+      background-color: #b22222;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .footer-nav {
+      padding: 1rem 2rem;
+      background-color: #edf2f7;
+      text-align: center;
+      color: #718096;
+    }
+
+    .footer-nav a {
+      text-decoration: none;
+      color: #718096;
+      margin: 0 1rem;
+    }
+
+    .footer-nav a:hover {
+      color: #b22222;
+    }
+
+    .footer-powered {
+      text-align: center;
+      color: #718096;
+      padding: 0.5rem 0;
+    }
+
+    .footer-powered span {
+      color: #b22222;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="SSK Logo" />
+    </div>  
+    <nav>
+      <a href="index.html">POČETNA</a>
+      <a href="Onama.html">O NAMA</a>
+      <a href="Uprava.html">UPRAVA</a>
+      <a href="Projekti.html">PROJEKTI</a>
+      <a href="Natjecajiiobjave.html">NATJEČAJI I OBJAVE</a>
+      <a href="https://gothru.co/PmiL0KxRr?index=scene_0&hlookat=0&vlookat=0&fov=120">SSK 360</a>
+      <a class="contact-button" href="Kontakti.html">KONTAKTI</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Srednja strukovna škola</h1>
+      <h2>Silvija Strahimira Kranjčevića</h2>
+      <h3>Livno</h3>
+      <a class="button" href="Onama.html">O NAMA</a>
+    </div>
+  </section>
+
+  <section class="stats-projects">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-number">560+</span>
+        <span class="stat-label">učenika</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">75+</span>
+        <span class="stat-label">djelatnika</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">27+</span>
+        <span class="stat-label">odjela</span>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-image">
+        <img src="projekit slika.png" alt="Project Image">
+      </div>
+      <div class="project-content">
+        <h2>Projekti</h2>
+        <p>
+          Svoju budućnost škola gradi na zanimljivim projektima i u suradnji s partnerima bez kojih bi neka ostvarenja učinjek bila samo san.
+        </p>
+        <a class="button" href="Projekti.html">VIŠE O PROJEKTIMA</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="natjecaji">
+    <div>
+      <h2>Natječaji</h2>
+      <a href="Natjecajiiobjave.html" class="button">PROČITAJTE</a>
+    </div>
+    <img style="height: 300px; width: 400px; margin-left: 150px;" src="natječaji slika.png" alt="Natječaji Image">
+  </section>
+
+  <section class="uprava">
+    <img style="height: 300px; width: 400px; margin-right: 150px;" src="uprava slika.png" alt="Uprava Image">
+    <div>
+      <h2>Uprava škole</h2>
+      <a href="Uprava.html" class="button">PROČITAJTE</a>
+    </div>
+  </section>
+
+  <section class="dnevne-aktivnosti">
+    <div class="triangle"></div>
+    <div class="triangle" style="left: 20%;"></div>
+    <div class="triangle" style="left: 80%;"></div>
+    <h2>Dnevne aktivnosti</h2>
+    <p>Svakodnevne aktivnosti škole možete pratiti na našim službenim stranicama na društvenim mrežama.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank">
+        <img style="height: 150px; width: 150px; margin-right: 200px;" src="fejs.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img style="height: 150px; width: 150px; margin-left: 200px;" src="IG.png" alt="Instagram">
+      </a>
+    </div>
+  </section>
+
+  <section class="footer-innovation">
+    <div class="footer-shapes">
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="shape3"></div>
+      <div class="shape4"></div>
+    </div>
+    <h1>"S inovacijom u učionici mijenjamo svijet zajedno!"</h1>
+    <a href="Kontakti.html" class="button">KONTAKTIRAJTE NAS</a>
+  </section>
+
+  <section class="footer-nav">
+    <a href="Kontakti.html">Kontakti</a>
+    <a href="Natjecajiiobjave.html">Natječaji i objave</a>
+    <a href="Onama.html">O nama</a>
+    <a href="Pocetna.html">Početna</a>
+    <a href="#">Pravila pisanja završnog rada</a>
+    <a href="Projekti.html">Projekti</a>
+    <a href="#">Struke i zanimanja</a>
+    <a href="Uprava.html">Uprava</a>
+  </section>
+
+  <section style="color: red; margin-right: 900px;" class="footer-powered">
+    Powered by SSK | 2025.
+  </section>
+</body>
+</html>
